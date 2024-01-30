@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Erik ♡</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #e84855;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #e84855;
+      color: #fff;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Hi baby! Be my Valentine???</h1>
+    <img id=valentine-image src="catlentine.jpg" alt="vday kitty">
+
+    <div class="button-container">
+      <button class="button" onclick="respondToValentine(true)">Yes</button>
+      <button class="button" onclick="respondToValentine(false)">No</button>
+    </div>
+
+    <p id="response-message"></p>
+
+
+  </div>
+
+  <script>
+    function respondToValentine(response) {
+      var responseMessage = document.getElementById("response-message");
+      if (response) {
+        responseMessage.innerHTML = "YIPPEEEEE! I love you sweetheart!";
+        changeImageSourceHAPPY();
+      } else {
+        responseMessage.innerHTML = "wrong answer :(";
+        changeImageSourceSAD();
+      }
+    }
+    function changeImageSourceSAD() {
+      var valentineImage = document.getElementById("valentine-image");
+      valentineImage.src = "sadcat.jpg";
+    }
+    function changeImageSourceHAPPY() {
+      var valentineImage = document.getElementById("valentine-image");
+      valentineImage.src = "happycat.jpg";
+    }
+  </script>
+
+</body>
+
+</html>
